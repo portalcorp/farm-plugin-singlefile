@@ -6,6 +6,15 @@
   "main": "./dist/cjs/index.cjs",
   "types": "./dist/esm/index.d.ts",
   "type": "module",
+  "bugs": {
+    "url": "https://github.com/portalcorp/farm-plugin-singlefile/issues",
+    "email": "project@hostname.com"
+  },
+  "author": {
+    "name": "Spike O'Carroll",
+    "email": "spike@portal.so",
+    "url": "https://spike.codes/"
+  },
   "exports": {
     ".": {
       "default": "./dist/esm/index.mjs",
