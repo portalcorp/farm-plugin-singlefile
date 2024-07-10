@@ -1,6 +1,6 @@
 {
   "name": "@portalcorp/farm-plugin-singlefile",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Farm plugin to inline all JS, CSS, media into one index.html file",
   "repository": "github:portalcorp/farm-plugin-singlefile",
   "main": "./dist/cjs/index.cjs",
