@@ -15,13 +15,13 @@ However, this can be very handy for offline web applications-- apps bundled into
 ## Installation
 
 ```shell
-npm install farm-plugin-singlefile --save-dev
+npm install @portalcorp/farm-plugin-singlefile --save-dev
 ```
 
 or
 
 ```shell
-yarn add farm-plugin-singlefile --dev
+yarn add @portalcorp/farm-plugin-singlefile --dev
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ Here's an example of how to use this plugin in your Farm configuration (`farm.co
 
 ```javascript
 import { defineConfig } from "@farmfe/core";
-import farmSingleFilePlugin from "farm-plugin-singlefile";
+import farmSingleFilePlugin from "@portalcorp/farm-plugin-singlefile";
 
 export default defineConfig({
   // ... other Farm configuration options
