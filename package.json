@@ -1,0 +1,42 @@
+{
+  "name": "farm-plugin-singlefile",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./build/cjs/index.cjs",
+  "types": "./build/esm/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./build/esm/index.mjs",
+      "require": "./build/cjs/index.cjs",
+      "import": "./build/esm/index.mjs",
+      "types": "./build/esm/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build:cjs": "cross-env FARM_FORMAT=cjs farm build",
+    "build": "farm build && npm run build:cjs",
+    "start": "farm watch",
+    "dev": "farm watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@farmfe/cli": "^1.0.1",
+    "@farmfe/core": "^1.2.8",
+    "@farmfe/js-plugin-dts": "^0.5.1",
+    "@types/node": "^20.11.16",
+    "cross-env": "^7.0.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@types/micromatch": "^4.0.9",
+    "@types/mime-types": "^2.1.4",
+    "micromatch": "^4.0.7",
+    "mime-types": "^2.1.35"
+  }
+}
