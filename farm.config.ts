@@ -1,41 +1,39 @@
-import { defineConfig } from '@farmfe/core';
-import farmDtsPlugin from '@farmfe/js-plugin-dts';
+import { defineConfig } from "@farmfe/core";
+import farmDtsPlugin from "@farmfe/js-plugin-dts";
 
-const format = (process.env.FARM_FORMAT as 'esm' | 'cjs') || 'esm';
-const ext = format === 'esm' ? 'mjs' : 'cjs';
+const format = (process.env.FARM_FORMAT as "esm" | "cjs") || "esm";
+const ext = format === "esm" ? "mjs" : "cjs";
 
 export default defineConfig({
   compilation: {
     input: {
-      index: './src/index.ts'
+      index: "./src/index.ts",
     },
     output: {
-      path: `build/${format}`,
+      path: `dist/${format}`,
       entryFilename: `[entryName].${ext}`,
-      targetEnv: 'node',
-      format
+      targetEnv: "node",
+      format,
     },
     partialBundling: {
       enforceResources: [
         {
-          name: 'index',
-          test: ['.+']
-        }
-      ]
+          name: "index",
+          test: [".+"],
+        },
+      ],
     },
     minify: false,
     sourcemap: false,
     presetEnv: false,
     persistentCache: {
       envs: {
-        FARM_FORMAT: format
-      }
-    }
+        FARM_FORMAT: format,
+      },
+    },
   },
   server: {
-    hmr: false
+    hmr: false,
   },
-  plugins: [
-    farmDtsPlugin()
-  ]
+  plugins: [farmDtsPlugin()],
 });

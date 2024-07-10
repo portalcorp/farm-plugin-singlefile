@@ -1,16 +1,17 @@
 {
   "name": "farm-plugin-singlefile",
-  "version": "0.0.0",
-  "description": "",
-  "main": "./build/cjs/index.cjs",
-  "types": "./build/esm/index.d.ts",
+  "version": "0.0.1",
+  "description": "Farm plugin to inline all JS, CSS, media into one index.html file",
+  "repository": "github:portalcorp/farm-plugin-singlefile",
+  "main": "./dist/cjs/index.cjs",
+  "types": "./dist/esm/index.d.ts",
   "type": "module",
   "exports": {
     ".": {
-      "default": "./build/esm/index.mjs",
-      "require": "./build/cjs/index.cjs",
-      "import": "./build/esm/index.mjs",
-      "types": "./build/esm/index.d.ts"
+      "default": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.mjs",
+      "types": "./dist/esm/index.d.ts"
     }
   },
   "scripts": {
@@ -20,12 +21,24 @@
     "dev": "farm watch",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "farm",
+    "farm-plugin",
+    "farm-plugin-singlefile",
+    "singlefile",
+    "single file",
+    "single-file",
+    "inline",
+    "css",
+    "SPA"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "peerDependencies": {
+    "@farmfe/core": "^1.2.8"
+  },
   "devDependencies": {
     "@farmfe/cli": "^1.0.1",
-    "@farmfe/core": "^1.2.8",
     "@farmfe/js-plugin-dts": "^0.5.1",
     "@types/node": "^20.11.16",
     "cross-env": "^7.0.3"
