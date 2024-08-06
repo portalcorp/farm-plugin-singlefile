@@ -1,6 +1,6 @@
 {
   "name": "@portalcorp/farm-plugin-singlefile",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Farm plugin to inline all JS, CSS, media into one index.html file",
   "repository": "github:portalcorp/farm-plugin-singlefile",
   "main": "./dist/cjs/index.cjs",
@@ -41,15 +41,14 @@
     "css",
     "SPA"
   ],
-  "author": "",
   "license": "MIT",
   "peerDependencies": {
     "@farmfe/core": "^1.2.8"
   },
   "devDependencies": {
-    "@farmfe/cli": "^1.0.1",
-    "@farmfe/js-plugin-dts": "^0.5.1",
-    "@types/node": "^20.11.16",
+    "@farmfe/cli": "^1.0.3",
+    "@farmfe/js-plugin-dts": "^0.5.2",
+    "@types/node": "^20.14.14",
     "cross-env": "^7.0.3"
   },
   "files": [
